@@ -1,0 +1,138 @@
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+                <th>Office</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" id="row-01a" name="row-01a" value=""></td>
+                <td><input type="text" id="row-01b" name="row-01b" value=""></td>
+                <td><input type="text" id="row-01c" name="row-01c" value=""></td>
+                <td><input type="text" id="row-01d" name="row-01d" value=""></td>
+                <td><input type="text" id="row-01e" name="row-01e" value=""></td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td><input type="text" id="row-2-age" name="row-2-age" value="63"></td>
+                <td><input type="text" id="row-2-position" name="row-2-position" value="Accountant"></td>
+                <td><select size="1" id="row-2-office" name="row-2-office">
+                    <option value="Edinburgh">
+                        Edinburgh
+                    </option>
+                    <option value="London">
+                        London
+                    </option>
+                    <option value="New York">
+                        New York
+                    </option>
+                    <option value="San Francisco">
+                        San Francisco
+                    </option>
+                    <option value="Tokyo" selected="selected">
+                        Tokyo
+                    </option>
+                </select></td>
+            </tr>
+			
+			
+			
+			
+			
+			
+			<div class="content">
+			<table id="section_h3" class="display" style="width:40%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td><input type="text" id="row-01a" name="row-01a" value=""></td>
+					<td><input type="text" id="row-01b" name="row-01b" value=""></td>
+					<td><input type="text" id="row-01c" name="row-01c" value=""></td>
+					<td><input type="text" id="row-01d" name="row-01d" value=""></td>
+					<td><input type="text" id="row-01e" name="row-01e" value=""></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td><input type="text" id="row-02a" name="row-02a" value=""></td>
+					<td><input type="text" id="row-02b" name="row-02b" value=""></td>
+					<td><input type="text" id="row-02c" name="row-02c" value=""></td>
+					<td><input type="text" id="row-02d" name="row-02d" value=""></td>
+					<td><input type="text" id="row-02e" name="row-02e" value=""></td>
+				</tr>			
+				<tr>
+					<td>3</td>
+					<td><input type="text" id="row-03a" name="row-03a" value="" class="form-control"></td>
+					<td><input type="text" id="row-03b" name="row-03b" value="" class="form-control"></td>
+					<td><input type="text" id="row-03c" name="row-03c" value="" class="form-control"></td>
+					<td><input type="text" id="row-03d" name="row-03d" value="" class="form-control"></td>
+					<td><input type="text" id="row-03e" name="row-03e" value="" class="form-control"></td>
+				</tr>				
+
+				<tr>
+					<td>3</td>
+					<td><input type="text" id="row-03a" name="row-03a" value="" class="form-control"></td>
+					<td><input type="text" id="row-03b" name="row-03b" value="" class="form-control"></td>
+					<td><input type="text" id="row-03c" name="row-03c" value="" class="form-control"></td>
+					<td><input type="text" id="row-03d" name="row-03d" value="" class="form-control"></td>
+					<td><input type="text" id="row-03e" name="row-03e" value="" class="form-control"></td>
+				</tr>
+				
+			</tbody>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			
+			</table>
+		</div>		
+			
+			
+			
+			
+			
+			
+			
+			<table id="section_h4" class="display" style="width:40%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>

@@ -1,0 +1,1035 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Tables Demo</title>
+  <meta name="description" content="The 3 Mega EPA Method 9 Form">
+  <meta name="Michael Mwembeshi" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.databtn {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .databtn:hover {
+  background-color: #555;
+}
+
+
+</style>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.semanticui.min.css">  
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+	<h2>3 Mega - EPA Method 9 Form</h2>
+	
+	<div class="container" class="display" style="width:50%">
+
+	<button class="collapsible">Section A - Company Information (NEW) </button>
+	
+		<div class="content">
+		
+		<form class="form-group" action="/" method="post"  id="section_A_form">
+		
+		<table id="section_a_new" class="display" style="width:70%">
+			<thead>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Company Name</td>
+					<td><input type="text" id="company_name" name="company_name" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Street Address</td>
+					<td><input type="text" id="street_address" name="street_address" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>City</td>
+					<td><input type="text" id="city" name="city" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>State</td>
+					<td><input type="text" id="state" name="state" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Zip</td>
+					<td><input type="text" id="zip" name="zip" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Phone (Key Contact)</td>
+					<td><input type="text" id="phone_key_contact" name="phone_key_contact" class="form-control"></td>
+				</tr>
+				<tr>
+					<td>Source ID Number</td>
+					<td><input type="text" id="source_id_number" name="source_id_number" class="form-control"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td>
+						<button class="btn btn-danger" type="submit" name="submit" value="clears_section_a" >Clear Form</button>		
+						<button class="btn btn-primary" type="submit" name="submit" value="add_section_a"  style="float: right;">Save Information</button>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+		</table>
+		
+
+
+		</form>
+		
+		</div>
+	
+	<button class="collapsible">Section A - Company Information</button>
+		<div class="content">
+			<table id="section_a" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section B - Process & Control Equipment</button>
+		<div class="content">
+			<table id="section_b" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section C - Emission Unit Description</button>
+		<div class="content">
+			<table id="section_c1" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+			<table id="section_c2" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">SECTION D - Description of Emissions </button>
+		<div class="content">
+			<table id="section_d" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+		<div class="content">
+			<table id="section_x" class="ui celled table" style="width:70%">
+			 <thead>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>Office</th>
+					<th>Extn.</th>
+					<th>Start date</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>Office</th>
+					<th>Extn.</th>
+					<th>Start date</th>
+					<th>Salary</th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section E - Plume Background and Weather Description</button>
+		<div class="content">
+			<table id="section_e" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section F - Source Layout Sketch</button>
+		<div class="content">
+			<canvas id="myCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+				Your browser does not support the HTML5 canvas tag.
+			</canvas>
+		</div>
+	<button class="collapsible">Section G - Additional Information</button>
+		<div class="content">
+			<table id="section_g" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section H - Observations </button>
+		<div class="content">
+			<table id="section_h1" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			
+			</table>
+			<table id="section_h2" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+	<button class="collapsible">Section H - Observations (NEW)</button>
+		<div class="content">
+			<table id="section_h3" class="display" style="width:70%">
+				<thead>
+				   <tr>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+				   </tr>
+			   </thead>
+			   
+			   <tbody>
+					<tr>
+							<td text-align='center'>1</td>
+							<td text-align='center'><input type="submit" id="row-01b" name="row-01b" value="5" class="databtn"  style="width:100%;height:100%"  onclick="openForm()"></td>
+							<td text-align='center'><input type="submit" id="row-01c" name="row-01c" value="5" class="databtn" style="width:100%;height:100%"  onclick="openForm()"></td>
+							<td text-align='center'><input type="submit" id="row-01d" name="row-01d" value="5" class="databtn" style="width:100%;height:100%"  onclick="openForm()"></td>
+							<td text-align='center'><input type="submit" id="row-01e" name="row-01e" value="5" class="databtn" style="width:100%;height:100%"  onclick="openForm()"></td>
+							<td text-align='center'><input type="text" id="row-01f" name="row-01f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>2</td>
+							<td text-align='center'><input type="submit" id="row-02b" name="row-02b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-02c" name="row-02c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-02d" name="row-02d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-02e" name="row-02e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-02f" name="row-02f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>3</td>
+							<td text-align='center'><input type="submit" id="row-03b" name="row-03b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-03c" name="row-03c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-03d" name="row-03d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-03e" name="row-03e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-03f" name="row-03f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>4</td>
+							<td text-align='center'><input type="submit" id="row-04b" name="row-04b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-04c" name="row-04c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-04d" name="row-04d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-04e" name="row-04e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-04f" name="row-04f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>5</td>
+							<td text-align='center'><input type="submit" id="row-05b" name="row-05b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-05c" name="row-05c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-05d" name="row-05d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-05e" name="row-05e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-05f" name="row-05f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>6</td>
+							<td text-align='center'><input type="submit" id="row-06b" name="row-06b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-06c" name="row-06c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-06d" name="row-06d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-06e" name="row-06e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-06f" name="row-06f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>7</td>
+							<td text-align='center'><input type="submit" id="row-07b" name="row-07b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-07c" name="row-07c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-07d" name="row-07d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-07e" name="row-07e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-07f" name="row-07f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>8</td>
+							<td text-align='center'><input type="submit" id="row-08b" name="row-08b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-08c" name="row-08c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-08d" name="row-08d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-08e" name="row-08e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-08f" name="row-08f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>9</td>
+							<td text-align='center'><input type="submit" id="row-09b" name="row-09b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-09c" name="row-09c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-09d" name="row-09d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-09e" name="row-09e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-09f" name="row-09f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>10</td>
+							<td text-align='center'><input type="submit" id="row-05b" name="row-10b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-10c" name="row-10c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-10d" name="row-10d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-10e" name="row-10e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-10f" name="row-10f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>	
+						<tr>
+							<td text-align='center'>11</td>
+							<td text-align='center'><input type="submit" id="row-11b" name="row-11b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-11c" name="row-11c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-11d" name="row-11d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-11e" name="row-11e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-11f" name="row-11f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>12</td>
+							<td text-align='center'><input type="submit" id="row-12b" name="row-12b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-12c" name="row-12c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-12d" name="row-12d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-12e" name="row-12e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-12f" name="row-12f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>13</td>
+							<td text-align='center'><input type="submit" id="row-13b" name="row-13b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-13c" name="row-13c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-13d" name="row-13d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-13e" name="row-13e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-13f" name="row-13f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>14</td>
+							<td text-align='center'><input type="submit" id="row-14b" name="row-14b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-14c" name="row-14c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-14d" name="row-14d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-14e" name="row-14e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-14f" name="row-14f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>15</td>
+							<td text-align='center'><input type="submit" id="row-15b" name="row-15b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-15c" name="row-15c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-15d" name="row-15d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-15e" name="row-15e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-15f" name="row-15f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>16</td>
+							<td text-align='center'><input type="submit" id="row-16b" name="row-16b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-16c" name="row-16c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-16d" name="row-16d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-16e" name="row-16e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-16f" name="row-16f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>17</td>
+							<td text-align='center'><input type="submit" id="row-17b" name="row-17b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-17c" name="row-17c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-17d" name="row-17d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-17e" name="row-17e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-17f" name="row-17f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>18</td>
+							<td text-align='center'><input type="submit" id="row-08b" name="row-18b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-18c" name="row-18c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-18d" name="row-18d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-18e" name="row-18e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-18f" name="row-18f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>19</td>
+							<td text-align='center'><input type="submit" id="row-09b" name="row-19b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-19c" name="row-19c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-19d" name="row-19d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-19e" name="row-19e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-19f" name="row-19f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>20</td>
+							<td text-align='center'><input type="submit" id="row-15b" name="row-20b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-20c" name="row-20c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-20d" name="row-20d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-20e" name="row-20e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-20f" name="row-20f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>	
+						<tr>
+							<td text-align='center'>21</td>
+							<td text-align='center'><input type="submit" id="row-21b" name="row-21b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-21c" name="row-21c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-21d" name="row-21d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-21e" name="row-21e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-21f" name="row-21f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>22</td>
+							<td text-align='center'><input type="submit" id="row-22b" name="row-22b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-22c" name="row-22c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-22d" name="row-22d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-22e" name="row-22e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-22f" name="row-22f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>23</td>
+							<td text-align='center'><input type="submit" id="row-23b" name="row-23b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-23c" name="row-23c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-23d" name="row-23d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-23e" name="row-23e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-23f" name="row-23f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>24</td>
+							<td text-align='center'><input type="submit" id="row-24b" name="row-24b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-24c" name="row-24c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-24d" name="row-24d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-24e" name="row-24e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-24f" name="row-24f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>25</td>
+							<td text-align='center'><input type="submit" id="row-25b" name="row-25b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-25c" name="row-25c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-25d" name="row-25d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-25e" name="row-25e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-25f" name="row-25f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>26</td>
+							<td text-align='center'><input type="submit" id="row-26b" name="row-26b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-26c" name="row-26c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-26d" name="row-26d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-26e" name="row-26e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-26f" name="row-26f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>27</td>
+							<td text-align='center'><input type="submit" id="row-27b" name="row-27b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-27c" name="row-27c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-27d" name="row-27d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-27e" name="row-27e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-27f" name="row-27f" value="Dubious thing this is" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>28</td>
+							<td text-align='center'><input type="submit" id="row-28b" name="row-18b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-28c" name="row-28c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-28d" name="row-28d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-28e" name="row-28e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-28f" name="row-28f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>29</td>
+							<td text-align='center'><input type="submit" id="row-29b" name="row-19b" value="5" class="databtn"  style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-29c" name="row-29c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-29d" name="row-29d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-29e" name="row-29e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-29f" name="row-29f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>
+						<tr>
+							<td text-align='center'>30</td>
+							<td text-align='center'><input type="submit" id="row-30b" name="row-30b" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-30c" name="row-30c" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-30d" name="row-30d" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="submit" id="row-30e" name="row-30e" value="5" class="databtn" style="width:100%;height:100%" ></td>
+							<td text-align='center'><input type="text" id="row-30f" name="row-30f" value="" class="form-control" style="width:100%;height:100%" ></td>
+						</tr>					
+			   
+			   </tbody>
+			   <tfoot>
+				   <tr>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+					   <th></th>
+				   </tr>
+			   </tfoot>
+			   </table>
+		</div>		
+	
+		<button class="collapsible">Section X - Updated</button>
+		<div class="content">
+			<table id="section_x" class="display" style="width:70%">
+			 <thead>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>					
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>	
+				</tr>
+			</tfoot>
+			</table>
+		</div>
+
+</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+	
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.semanticui.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+	
+
+	<script>
+
+var Section_A_dataSet = [
+    [ "Company Name", "Augusta Waste Processing"],
+    [ "Street Address", "14500 Columbus Drive"],
+    [ "City", "Evans" ],
+    [ "State", "GA"],
+    [ "Zip", "30815"],
+    [ "Phone (Key Contact)","706-415-9856"],
+    [ "Source ID Number", "547"]
+];
+
+var Section_B_dataSet = [
+    [ "Process Equipment", "Melter","Operating Mode","Continuous"],
+    [ "Control Equipment", "Wet Electrostatic Precipitator (WESP)", "Operating Mode","Continuous"]
+];
+
+
+var Section_C1_dataSet = [
+    [ "Describe Emission Unit", "Melter offgas exhaust stack"]
+];
+
+var Section_C2_dataSet = [
+    [ "Height Above Ground Level ", "Start", "0", "End", "100"],
+    [ "Height Relative to Observer", "Start", "5", "End", "100"],
+    [ "Distance from Observer", "Start", "10", "End", "60"],
+    [ "Direction from Observer", "Start", "NE", "End", "N" ]
+];
+
+var Section_D_dataSet = [
+    [ "Describe Emissions", "Start", "Fanning plume", "End", "Conning plume"],
+    [ "Emissions Color", "Start", "black smoke", "End", "black smoke"],
+    [ "If water drop plume", "Attached", "N/A", "Detached", "N/A"],
+    [ "Point in the plume at which opacity was determined", "Start", "Stack emission point", "End", "Stack emission point" ]
+];
+
+var Section_E_dataSet = [
+    [ "Describe Plume Background", "Start", "Green tree", "End", "Redbrick building"],
+    [ "Background", "Start", "Blue sky", "End", "Blue Sky"],
+    [ "Sky Conditions", "Start", "Sunny and Clear", "End", "Sunny and Clear"],
+	[ "Wind Speed", "Start", "2 mph", "End", "2 mph"],
+    [ "Wind Direction", "Start", "NE", "End", "NE"],
+	[ "Ambient Temp", "Start", "85", "End", "84"],	
+    [ "Wet Bulb Temp", "Start", "76F", "End", "76F" ]
+];
+
+
+var Section_G_dataSet = [
+    [ "Additional Information", "From the rather self conscious heights of our own state of equivocal civilisation and that of the community to which we belong"]
+];
+
+var Section_H1_dataSet = [
+    [ "Observation Date", "10-Dec-2019", "Start Time", "10:10am", "End Time", "12:30pm"]
+];
+
+var Section_H2_dataSet = [
+    [ "1", "", "", "", "", "" ],
+    [ "2", " ", " ", " ", "", ""  ],
+    [ "3", " ", " ", " ", "", "" ],
+    [ "4", " ", " ", " ", "", ""  ],
+    [ "5", " ", " ", " ", "", ""  ],
+    [ "6", " ", " ", " ", "", ""  ],
+    [ "7", " ", " ", " ", "", ""  ],
+    [ "8", " ", " ", " ", "", ""  ],
+    [ "9", " ", " ", " ", "", ""  ],
+    [ "10", " ", " ", " ", "", ""  ],
+    [ "11", " ", " ", " ", "", ""  ],
+    [ "12", " ", " ", " ", "", ""  ],
+    [ "13", " ", " ", " ", "", "" ],
+    [ "14", " ", " ", " ", "", ""  ],
+    [ "15", " ", " ", " ", "", ""  ],
+    [ "16", " ", " ", " ", "", ""  ],
+    [ "17", " ", " ", " ", "", ""  ],
+    [ "18", " ", " ", " ", "", ""  ],
+    [ "19", " ", "5 ", " ", "", ""  ],
+    [ "20", " ", " ", " ", "", ""  ],
+    [ "21", " ", " ", " 5", "", ""  ],
+    [ "22", " ", " ", " ", "", ""  ],
+    [ "23", " ", " ", " ", "", "" ],
+    [ "24", " ", " ", " ", "5", ""  ],
+    [ "25", " ", " ", " ", "", ""  ],
+    [ "26", " ", " ", " ", "", ""  ],
+    [ "27", " ", " ", " ", "", "5"  ],
+    [ "28", " ", " ", " ", "", ""  ],
+    [ "29", " ", " ", " ", "", ""  ],
+    [ "30", " ", " ", " ", "", ""   ]
+];
+
+var Section_H3_dataSet = [
+    [ "1", "5", "10", "20", "25", "" ],
+    [ "2", "25", "25", "20", "35", "No change"  ]
+];
+
+// var jsonData = [{"userID":"1","userName":"name1"},{"userID":"2","userName":"name2"},{"userID":"3","userName":"name3"}]
+// https://stackoverflow.com/questions/38014867/datatable-with-static-json-data-source
+// TO DO: https://datatables.net/examples/api/form.html
+ 
+$(document).ready(function() {
+    $('#section_a').DataTable( {
+        data: Section_A_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+
+    $('#section_b').DataTable( {
+        data: Section_B_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" },
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+
+    $('#section_c1').DataTable( {
+        data: Section_C1_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+
+    $('#section_c2').DataTable( {
+        data: Section_C2_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" },
+            { title: "" },
+            { title: "" },
+			{ title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+
+    $('#section_d').DataTable( {
+        data: Section_D_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" },
+	        { title: "" },
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+
+
+} );
+
+
+$(document).ready(function() {
+    $('#section_e').DataTable( {
+        data: Section_E_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" },
+	        { title: "" },
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+} );
+
+//Section F - TODO Canvas Manipulation of Image
+var Img = new Image();   // Create new img element
+Img.addEventListener('load', function() {
+  // execute drawImage statements here
+}, false);
+Img.src = 'img_the_scream.jpeg'; // Set source path
+
+window.onload = function() {
+
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  // var img = document.getElementById("scream");
+  // ctx.drawImage(img, 10, 10);
+  ctx.drawImage(Img, 10, 10);
+}
+
+
+$(document).ready(function() {
+    $('#section_g').DataTable( {
+        data: Section_G_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+} );
+
+
+$(document).ready(function() {
+    $('#section_h1').DataTable( {
+        data: Section_H1_dataSet,
+        columns: [
+            { title: "" },
+            { title: "" },
+	        { title: "" },
+            { title: "" },
+            { title: "" },
+            { title: "" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false,
+		info: false
+    } );
+} );
+
+
+$(document).ready(function() {
+    $('#section_h2').DataTable( {
+        data: Section_H2_dataSet,
+        columns: [
+            { title: "Minute" },
+            { title: "0 Sec" },
+            { title: "15 Sec" },
+            { title: "30 Sec" },
+            { title: "45 Sec" },
+            { title: "Comments" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false
+    } );
+} );
+
+$(document).ready(function() {
+    $('#section_h3').DataTable( {
+        data: Section_H2_dataSet,
+        columns: [
+            { title: "Minute" },
+            { title: "0 Sec" },
+            { title: "15 Sec" },
+            { title: "30 Sec" },
+            { title: "45 Sec" },
+            { title: "Comments" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false
+    } );
+} );
+
+
+$(document).ready(function() {
+
+	var h_data = JSON.parse('{{ h_data | tojson | safe}}');
+
+    $('#section_x').DataTable( {
+        data: h_data,
+        columns: [
+            { title: "Minute" },
+            { title: "0 Sec" },
+            { title: "15 Sec" },
+            { title: "30 Sec" },
+            { title: "45 Sec" },
+            { title: "Comments" }
+        ],
+		searching: false,
+		paging: false,
+		ordering: false
+    } );
+} );
+
+
+$(document).ready(function(){
+
+	var pythonData = JSON.parse('{{ h_data | tojson | safe}}');
+
+	windows.alert(pythonData[0].rowNum)
+
+    // var jsonData = [{"userID":"1","userName":"name1"},{"userID":"2","userName":"name2"},{"userID":"3","userName":"name3"}];
+    $('#section_x').dataTable({
+        data: pythonData,
+        columns: [
+            { data: 'rowNum' },
+            { data: 'sec0' },
+            { data: 'sec15' },
+            { data: 'sec30' },
+            { data: 'sec45' },
+            { data: 'Notes' }			
+        ]
+
+});
+
+function openForm() {
+    
+    $('#section_h3 tbody').on( 'click', 'td', function () {
+        alert( 'Clicked on cell in visible column: '+table.cell( this ).index().columnVisible );
+    } );
+
+   // document.getElementById("myForm").style.display = "block";
+}
+
+// https://stackoverflow.com/questions/42499535/passing-a-json-object-from-flask-to-javascript
+
+</script>
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+<script>
+	//TO Do
+	// complex header: https://datatables.net/examples/basic_init/complex_header.html
+	// form input: https://datatables.net/examples/api/form.html
+	// Column indexing [1 - 30]: https://datatables.net/examples/api/counter_columns.html
+	// https://datatables.net/examples/data_sources/js_array.html
+	// Show extra details
+</script>
+	
+</body>
+</html>
